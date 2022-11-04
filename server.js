@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/api/bookticket", require("./routes/api/bookticket"));
+app.use("/api/checkavailability", require("./routes/api/checkAvailability"));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
