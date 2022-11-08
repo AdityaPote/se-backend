@@ -5,7 +5,6 @@ require("dotenv").config();
 // @public
 const CheckAvailability = async (req, res) => {
   try {
-    console.log(req.body);
     const { classType, fromStationCode, toStationCode, trainNo, date, quota } =
       req.body;
     if (
