@@ -1,4 +1,3 @@
-const axios = require("axios");
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -24,6 +23,7 @@ const Checkout = async (req, res) => {
       ],
       mode: "payment",
       success_url: "http://localhost:3000/success",
+      cancel_url: "http://localhost:3000/cancel",
     });
 
     res.json({ url: session.url });
