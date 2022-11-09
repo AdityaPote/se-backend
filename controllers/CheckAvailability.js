@@ -26,8 +26,6 @@ const CheckAvailability = async (req, res) => {
       },
     };
 
-    console.log(req.body);
-
     const url = `https://irctc1.p.rapidapi.com/api/v1/checkSeatAvailability?classType=${classType}&fromStationCode=${fromStationCode}&quota=${quota}&toStationCode=${toStationCode}&trainNo=${trainNo}&date=${date}`;
 
     const response = await fetch(url, options);
@@ -44,8 +42,6 @@ const CheckAvailability = async (req, res) => {
         quota,
       };
     });
-
-    console.log(newResponse);
 
     res.status(200).json(newResponse);
   } catch (error) {
