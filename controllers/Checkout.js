@@ -24,7 +24,6 @@ const Checkout = async (req, res) => {
       ],
       mode: "payment",
       success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
     });
 
     res.json({ url: session.url });
