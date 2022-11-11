@@ -112,7 +112,7 @@ const CheckAvailability = async (req, res) => {
 
     // res.status(200).json(newResponse);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json({ msg: error.message });
   }
 };
 

@@ -28,7 +28,7 @@ const Checkout = async (req, res) => {
 
     res.json({ url: session.url });
   } catch (error) {
-    res.status(500).json({ error: "Something went wrong" });
+    res.status(500).json({ msg: error.message });
   }
 };
 
